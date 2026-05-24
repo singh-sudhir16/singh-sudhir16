@@ -1,0 +1,64 @@
+name: Update Profile Stats
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: "0 0 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Calculate stats
+        env:
+          USERNAME: singh-sudhir16
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+
+          PR_COUNT=$(curl -s \
+          "https://api.github.com/search/issues?q=type:pr+author:${USERNAME}" \
+          | jq '.total_count')
+
+          REPO_COUNT=$(curl -s \
+          "https://api.github.com/users/${USERNAME}/repos?per_page=100" \
+          | jq 'length')
+
+          ORG_COUNT=$(curl -s \
+          -H "Authorization: Bearer $GITHUB_TOKEN" \
+          https://api.github.com/user/orgs \
+          | jq 'length')
+
+          echo "PR_COUNT=$PR_COUNT" >> $GITHUB_ENV
+          echo "REPO_COUNT=$REPO_COUNT" >> $GITHUB_ENV
+          echo "ORG_COUNT=$ORG_COUNT" >> $GITHUB_ENV
+
+      - name: Update README
+        run: |
+
+          sed -i \
+          "s|<!-- PR_COUNT -->[0-9]*|<!-- PR_COUNT -->${PR_COUNT}|g" README.md
+
+          sed -i \
+          "s|<!-- REPO_COUNT -->[0-9]*|<!-- REPO_COUNT -->${REPO_COUNT}|g" README.md
+
+          sed -i \
+          "s|<!-- ORG_COUNT -->[0-9]*|<!-- ORG_COUNT -->${ORG_COUNT}|g" README.md
+
+      - name: Commit
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+
+          git add README.md
+
+          git diff --cached --quiet || \
+          git commit -m "chore: update profile stats"
+
+          git push
