@@ -28,17 +28,17 @@ Computer Science Student • Open Source Contributor • Full Stack Developer
 <table>
 <tr>
 <td align="center">
-<h3><!-- PR_COUNT -->0</h3>
+<h3><!-- PR_COUNT -->12</h3>
 PRs Created
 </td>
 
 <td align="center">
-<h3><!-- REPO_COUNT -->0</h3>
+<h3><!-- REPO_COUNT -->24</h3>
 Repositories
 </td>
 
 <td align="center">
-<h3><!-- ORG_COUNT -->0</h3>
+<h3><!-- ORG_COUNT -->3</h3>
 Organizations
 </td>
 </tr>
