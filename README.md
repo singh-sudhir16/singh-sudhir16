@@ -33,7 +33,7 @@ PRs Created
 </td>
 
 <td align="center">
-<h3><!-- REPO_COUNT -->29</h3>
+<h3><!-- REPO_COUNT -->30</h3>
 Repositories
 </td>
 
