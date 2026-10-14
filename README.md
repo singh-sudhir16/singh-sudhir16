@@ -28,7 +28,7 @@ Computer Science Student • Open Source Contributor • Full Stack Developer
 <table>
 <tr>
 <td align="center">
-<h3><!-- PR_COUNT -->12</h3>
+<h3><!-- PR_COUNT -->null</h3>
 PRs Created
 </td>
 
