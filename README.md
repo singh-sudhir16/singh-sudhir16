@@ -1,16 +1,25 @@
-# Sudhir Singh
+<h1 align="center">Sudhir Singh</h1>
 
-Software Engineer at **Juspay** on the UPI team, building payment infrastructure. Outside work I build backend systems from scratch to learn how they hold up under load and failure.
+<p align="center">
+  Software Engineer at <b>Juspay</b>, building UPI payments.<br/>
+  Currently in Lima, Peru, helping launch UPI in a new market.
+</p>
 
-[LinkedIn](https://www.linkedin.com/in/sudhir-singh-241983286/) · [LeetCode](https://leetcode.com/u/sudhirsingh16/) (1660+) · [CodeChef](https://www.codechef.com/users/sudhirsingh92) (3★)
+<p align="center">
+  <a href="https://www.linkedin.com/in/sudhir-singh-241983286/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+  <a href="https://leetcode.com/u/sudhirsingh16/"><img src="https://img.shields.io/badge/LeetCode-1660%2B-FFA116?style=flat&logo=leetcode&logoColor=white" alt="LeetCode 1660+"/></a>
+  <a href="https://www.codechef.com/users/sudhirsingh92"><img src="https://img.shields.io/badge/CodeChef-3%E2%98%85-5B4638?style=flat&logo=codechef&logoColor=white" alt="CodeChef 3 star"/></a>
+</p>
 
-## Projects
+### Projects
 
-- **[RedisFlow](https://github.com/singh-sudhir16/redisflows)**: distributed job queue on Redis with at-least-once delivery, retries and crash recovery. ~50K jobs/s enqueue. *Java, Spring Boot, Redis*
-- **[ObjectVault](https://github.com/singh-sudhir16/objectvault)**: S3-style object storage service (in progress). *Java, Spring Boot, PostgreSQL*
-- **[Rust WebSocket Chat](https://github.com/singh-sudhir16/rust-websocket-chat)**: multi-room real-time chat with reconnection and message replay. *Rust, axum, tokio*
-- **[Payments Wallet](https://github.com/singh-sudhir16/payments-wallet-app)**: full-stack wallet with auth, transfers and transaction history. *Node.js, Express, MongoDB, React*
+| Project | About |
+|---|---|
+| [**RedisFlow**](https://github.com/singh-sudhir16/redisflows) | Distributed job queue with at-least-once delivery and crash recovery (~50K jobs/s)<br/><sub>Java · Spring Boot · Redis · Lua</sub> |
+| [**ObjectVault**](https://github.com/singh-sudhir16/objectvault) | S3-style object storage service (in progress)<br/><sub>Java · Spring Boot · PostgreSQL</sub> |
+| [**Rust WebSocket Chat**](https://github.com/singh-sudhir16/rust-websocket-chat) | Multi-room real-time chat with reconnect and message replay<br/><sub>Rust · axum · tokio</sub> |
+| [**Payments Wallet**](https://github.com/singh-sudhir16/payments-wallet-app) | Full-stack wallet with auth, transfers and transaction history<br/><sub>Node.js · Express · MongoDB · React</sub> |
 
-## Tech
+### Tech
 
-Java · Haskell · C++ · JavaScript · Python · Spring Boot · Node.js · React · PostgreSQL · Redis · MongoDB · AWS · Kubernetes · Docker
+<img src="https://skillicons.dev/icons?i=java,haskell,cpp,js,python,spring,nodejs,react,postgres,redis,mongodb,aws,kubernetes,docker" alt="Java, Haskell, C++, JavaScript, Python, Spring, Node.js, React, PostgreSQL, Redis, MongoDB, AWS, Kubernetes, Docker"/>
