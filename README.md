@@ -1,112 +1,62 @@
-<h1 align="center">Hi 👋, I'm Sudhir Singh</h1>
+# Sudhir Singh
 
-<h3 align="center">
-Computer Science Student • Open Source Contributor • Full Stack Developer
-</h3>
+**Software Engineer at Juspay** · UPI payments · Bengaluru, India & Lima, Peru
 
-<p align="center">
-  <a href="https://www.linkedin.com/in/sudhir-singh-241983286/">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
-  </a>
-</p>
+I build backend systems for payments. At Juspay I'm on the UPI team, currently on-site in Lima helping launch UPI payments in a new market. Outside work, I build infrastructure from scratch to see how it behaves under load and when things fail: a job queue, an object store, a real-time chat server.
 
----
+[LinkedIn](https://www.linkedin.com/in/sudhir-singh-241983286/) · [LeetCode](https://leetcode.com/u/sudhirsingh16/) · [CodeChef](https://www.codechef.com/users/sudhirsingh92)
 
-## 🚀 About Me
+## At Juspay
 
-- 🎓 Bachelor's in Computer Science
-- 💻 Full Stack Development (MERN)
-- ⚡ Open Source Contributor
-- 🧠 Data Structures & Algorithms
-- ☁️ AWS & Cloud Technologies
-- 🐧 Linux Enthusiast
+- Secure REST APIs in **Haskell** on Juspay's in-house framework, with multiple authentication schemes and encrypted request and response payloads
+- **Kubernetes** services for new stack setups: load balancers, application, Redis and database tiers
+- Read-through and write-through **Redis** caching in a PSP stack to take load off the database
+- Integrations with multiple **SMS providers**, with automatic retry and failover between them
 
----
+## Featured projects
 
-## 📈 Open Source Stats
+### [RedisFlow](https://github.com/singh-sudhir16/redisflows) · distributed job queue
 
-<table>
-<tr>
-<td align="center">
-<h3><!-- PR_COUNT -->12null</h3>
-PRs Created
-</td>
+**Java 21 · Spring Boot 4 · Redis Streams · Lua · Docker**
 
-<td align="center">
-<h3><!-- REPO_COUNT -->30</h3>
-Repositories
-</td>
+A Sidekiq/BullMQ-style job queue where every job state change is one atomic Lua script, so the system stays consistent when a process crashes at any point.
 
-<td align="center">
-<h3><!-- ORG_COUNT -->3</h3>
-Organizations
-</td>
-</tr>
-</table>
+- At-least-once delivery with consumer groups and visibility-timeout reclaim: a simulated worker crash with 1,000 unacknowledged jobs loses 0 of 5,000
+- Retries with exponential backoff and jitter, dead-letter queues, idempotent enqueue, leased priority lanes, leader-elected scheduling, and distributed locks with fencing tokens
+- ~50K jobs/s enqueue and ~28K jobs/s processed by 2 workers, with p99 end-to-end latency under 3 ms at 10K jobs/s (measured on a laptop); 44 tests against real Redis via Testcontainers
 
----
+### [ObjectVault](https://github.com/singh-sudhir16/objectvault) · S3-style object storage (in progress)
 
-## 🛠 Tech Stack
+**Java 21 · Spring Boot 3 · PostgreSQL · Testcontainers**
 
-### Languages
-![C](https://img.shields.io/badge/C-blue?style=for-the-badge)
-![C++](https://img.shields.io/badge/C++-blue?style=for-the-badge)
-![Java](https://img.shields.io/badge/Java-orange?style=for-the-badge)
-![Python](https://img.shields.io/badge/Python-yellow?style=for-the-badge)
-![JavaScript](https://img.shields.io/badge/JavaScript-black?style=for-the-badge)
+- Metadata in PostgreSQL and bytes on disk under content-addressed paths, so user-supplied keys never touch the filesystem
+- SHA-256 ETags computed in a single streaming pass (constant memory for any file size); uploads are written to a temp file and moved atomically, so readers never see partial content
+- Built in phases, with each design decision recorded as an ADR (architecture decision record)
 
-### Frontend
-![React](https://img.shields.io/badge/React-blue?style=for-the-badge)
-![TailwindCSS](https://img.shields.io/badge/TailwindCSS-cyan?style=for-the-badge)
+### [Rust WebSocket Chat](https://github.com/singh-sudhir16/rust-websocket-chat) · real-time chat
 
-### Backend
-![NodeJS](https://img.shields.io/badge/NodeJS-green?style=for-the-badge)
-![ExpressJS](https://img.shields.io/badge/ExpressJS-black?style=for-the-badge)
+**Rust · axum · tokio**
 
-### Database
-![MongoDB](https://img.shields.io/badge/MongoDB-green?style=for-the-badge)
+- Multi-room chat with direct messages and typing indicators: rooms fan out over tokio broadcast channels, and DMs go through per-client channels
+- Clients reconnect with exponential backoff, and the server replays missed messages from a per-room history buffer using monotonic message IDs
 
-### DevOps & Cloud
-![Docker](https://img.shields.io/badge/Docker-blue?style=for-the-badge)
-![AWS](https://img.shields.io/badge/AWS-orange?style=for-the-badge)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-blue?style=for-the-badge)
+### [Payments Wallet](https://github.com/singh-sudhir16/payments-wallet-app) · full-stack wallet
 
----
+**Node.js · Express · MongoDB · React**
 
-## 📊 GitHub Statistics
+- Sign-up and sign-in with JWT and bcrypt, wallet top-ups, transfers between users, and transaction history, with request validation in Zod
 
-<p align="center">
-<img height="180em"
-src="https://github-readme-stats.vercel.app/api?username=singh-sudhir16&show_icons=true&theme=tokyonight&hide_border=true"/>
+Earlier work: [SolarGIS](https://github.com/singh-sudhir16/SolarGIS) (estimating rooftop solar potential with deep learning) · [English→Kashmiri translation](https://github.com/singh-sudhir16/IndicMT-Kashmiri) (IndicTrans2) · [SLR parse-table generator](https://github.com/singh-sudhir16/SLR-parse-table-generator)
 
-<img height="180em"
-src="https://github-readme-streak-stats.herokuapp.com/?user=singh-sudhir16&theme=tokyonight&hide_border=true"/>
-</p>
+## Tech
 
-<p align="center">
-<img height="180em"
-src="https://github-readme-stats.vercel.app/api/top-langs/?username=singh-sudhir16&layout=compact&theme=tokyonight&hide_border=true"/>
-</p>
+- **Languages:** Java, Haskell, C++, JavaScript, Python, Bash
+- **Backend:** Spring Boot, Node.js, Express, REST APIs, webhooks, event-driven systems
+- **Data:** PostgreSQL, Redis, MongoDB
+- **Infrastructure:** AWS (Lambda, ALB/NLB), Kubernetes, Docker, GitHub Actions, Linux
+- **Frontend:** React
+- **Learning:** Rust
 
----
+## Problem solving
 
-## 🏆 Contribution Graph
-
-<p align="center">
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=singh-sudhir16&theme=tokyo-night&hide_border=true"/>
-</p>
-
----
-
-## 📌 Featured Projects
-
-### 🎥 YouTube Data Extraction & Trends Visualization
-Python • Pandas • MySQL • Google API
-
-Extracts channel statistics and visualizes trends using Python and SQL.
-
----
-
-<p align="center">
-<img src="https://komarev.com/ghpvc/?username=singh-sudhir16&label=Profile%20Views&color=blueviolet&style=for-the-badge"/>
-</p>
+[LeetCode](https://leetcode.com/u/sudhirsingh16/) rating 1660+ with 980+ problems solved · [CodeChef](https://www.codechef.com/users/sudhirsingh92) 3★
