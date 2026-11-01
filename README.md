@@ -1,25 +1,11 @@
-<h1 align="center">Sudhir Singh</h1>
+Hi, I'm Sudhir. I'm a backend engineer at [Juspay](https://juspay.io) on the UPI team, currently on-site in Lima, Peru, helping launch UPI payments in a new market.
 
-<p align="center">
-  Software Engineer at <b>Juspay</b>, building UPI payments.<br/>
-  Currently in Lima, Peru, helping launch UPI in a new market.
-</p>
+At work I build payment APIs in Haskell and run the services behind them on Kubernetes, with a focus on the caching, retry and failover paths that keep payments flowing when downstream systems fail.
 
-<p align="center">
-  <a href="https://www.linkedin.com/in/sudhir-singh-241983286/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
-  <a href="https://leetcode.com/u/sudhirsingh16/"><img src="https://img.shields.io/badge/LeetCode-1660%2B-FFA116?style=flat&logo=leetcode&logoColor=white" alt="LeetCode 1660+"/></a>
-  <a href="https://www.codechef.com/users/sudhirsingh92"><img src="https://img.shields.io/badge/CodeChef-3%E2%98%85-5B4638?style=flat&logo=codechef&logoColor=white" alt="CodeChef 3 star"/></a>
-</p>
+Outside work I build infrastructure from scratch to understand how it behaves under load and failure:
 
-### Projects
+- **[RedisFlow](https://github.com/singh-sudhir16/redisflows)**: a distributed job queue on Redis with at-least-once delivery and crash recovery, where every state change is one atomic Lua script. Java, Spring Boot.
+- **[ObjectVault](https://github.com/singh-sudhir16/objectvault)**: an S3-style object store, built in phases with written design decisions. Java, PostgreSQL.
+- **[Rust WebSocket Chat](https://github.com/singh-sudhir16/rust-websocket-chat)**: multi-room real-time chat with reconnection and message replay. Rust, tokio.
 
-| Project | About |
-|---|---|
-| [**RedisFlow**](https://github.com/singh-sudhir16/redisflows) | Distributed job queue with at-least-once delivery and crash recovery (~50K jobs/s)<br/><sub>Java · Spring Boot · Redis · Lua</sub> |
-| [**ObjectVault**](https://github.com/singh-sudhir16/objectvault) | S3-style object storage service (in progress)<br/><sub>Java · Spring Boot · PostgreSQL</sub> |
-| [**Rust WebSocket Chat**](https://github.com/singh-sudhir16/rust-websocket-chat) | Multi-room real-time chat with reconnect and message replay<br/><sub>Rust · axum · tokio</sub> |
-| [**Payments Wallet**](https://github.com/singh-sudhir16/payments-wallet-app) | Full-stack wallet with auth, transfers and transaction history<br/><sub>Node.js · Express · MongoDB · React</sub> |
-
-### Tech
-
-<img src="https://skillicons.dev/icons?i=java,haskell,cpp,js,python,spring,nodejs,react,postgres,redis,mongodb,aws,kubernetes,docker" alt="Java, Haskell, C++, JavaScript, Python, Spring, Node.js, React, PostgreSQL, Redis, MongoDB, AWS, Kubernetes, Docker"/>
+You can find me on [LinkedIn](https://www.linkedin.com/in/sudhir-singh-241983286/) and [LeetCode](https://leetcode.com/u/sudhirsingh16/).
