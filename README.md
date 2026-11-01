@@ -1,11 +1,28 @@
-Hi, I'm Sudhir. I'm a backend engineer at [Juspay](https://juspay.io) on the UPI team, currently on-site in Lima, Peru, helping launch UPI payments in a new market.
+<h1 align="center">Hi, I'm Sudhir 👋</h1>
+<h3 align="center">Backend Engineer · Payments · Distributed Systems</h3>
 
-At work I build payment APIs in Haskell and run the services behind them on Kubernetes, with a focus on the caching, retry and failover paths that keep payments flowing when downstream systems fail.
+<p align="center">
+  <a href="https://www.linkedin.com/in/sudhir-singh-241983286/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logoColor=white" alt="LinkedIn"/></a>
+  <a href="https://leetcode.com/u/sudhirsingh16/"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" alt="LeetCode"/></a>
+  <a href="https://www.codechef.com/users/sudhirsingh92"><img src="https://img.shields.io/badge/CodeChef-5B4638?style=for-the-badge&logo=codechef&logoColor=white" alt="CodeChef"/></a>
+</p>
 
-Outside work I build infrastructure from scratch to understand how it behaves under load and failure:
+### About me
 
-- **[RedisFlow](https://github.com/singh-sudhir16/redisflows)**: a distributed job queue on Redis with at-least-once delivery and crash recovery, where every state change is one atomic Lua script. Java, Spring Boot.
-- **[ObjectVault](https://github.com/singh-sudhir16/objectvault)**: an S3-style object store, built in phases with written design decisions. Java, PostgreSQL.
-- **[Rust WebSocket Chat](https://github.com/singh-sudhir16/rust-websocket-chat)**: multi-room real-time chat with reconnection and message replay. Rust, tokio.
+I'm a backend engineer at **Juspay**, working on UPI payments. I build the services and APIs that move money, where speed, security and reliability all matter.
 
-You can find me on [LinkedIn](https://www.linkedin.com/in/sudhir-singh-241983286/) and [LeetCode](https://leetcode.com/u/sudhirsingh16/).
+- 💳 **Payment systems:** secure APIs, caching and fault-tolerant integrations
+- ⚙️ **Distributed systems:** queues, event-driven architecture and reliability
+- 🛠️ **Side projects:** infrastructure built from scratch to learn how it behaves under load and failure
+
+### Featured projects
+
+| Project | Description |
+|---|---|
+| 🚀 [**RedisFlow**](https://github.com/singh-sudhir16/redisflows) | Distributed job queue with reliable delivery, retries and crash recovery<br/><sub>Java · Spring Boot · Redis</sub> |
+| 🗄️ [**ObjectVault**](https://github.com/singh-sudhir16/objectvault) | S3-style object storage service<br/><sub>Java · Spring Boot · PostgreSQL</sub> |
+| 💬 [**Rust WebSocket Chat**](https://github.com/singh-sudhir16/rust-websocket-chat) | Real-time multi-room chat server<br/><sub>Rust · tokio</sub> |
+
+### Tech stack
+
+<img src="https://skillicons.dev/icons?i=java,haskell,cpp,js,python,spring,nodejs,react,postgres,redis,mongodb,aws,kubernetes,docker,linux" alt="Java, Haskell, C++, JavaScript, Python, Spring, Node.js, React, PostgreSQL, Redis, MongoDB, AWS, Kubernetes, Docker, Linux"/>
